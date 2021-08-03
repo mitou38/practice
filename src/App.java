@@ -34,7 +34,7 @@ public class App {
      * @param number_array Array of numbers
      * @param target result
      */
-    public static void  twoSum(int[] number_array, int target ){
+    public static int[]  twoSum(int[] number_array, int target ){
 
         for(int i =0; i < number_array.length; i++)
         {
@@ -44,25 +44,25 @@ public class App {
                 .collect(Collectors.toList());
             if(complement > 0 && listNumbers.contains(complement))
             {
-                printArray(new int[] {i, listNumbers.indexOf(complement)}, target);
-                return;
+                return new int[] {i, listNumbers.indexOf(complement)};
             }
             
         }
-        throw new IllegalArgumentException("No solution for => " + target);
+        return null;
     }
     public static void main(String[] args) throws Exception {
         int[] number_array = new int[] {2, 4, 8, 16, 32};
-        try{
-            App.twoSum(number_array, 12);   
-            App.twoSum(number_array, 34);   
-            App.twoSum(number_array, 18);
-            App.twoSum(number_array, 42);
-        }catch(IllegalArgumentException e){
-            System.err.println(e.getMessage());
-        }
-         
+        int[] res = App.twoSum(number_array, 12);
+        assert res[0] + res[1] == 12;
+        
+        res = App.twoSum(number_array, 34);   
+        assert res[0] + res[1] == 34;
+
+        res = App.twoSum(number_array, 18);   
+        assert res[0] + res[1] == 18;
+        
+        assert App.twoSum(number_array, 42) == null;
+
+        System.out.println("Everything its OK");
     }   
 }
-
-
