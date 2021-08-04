@@ -4,31 +4,6 @@ import java.util.stream.Collectors;
 
 public class App {
 
-
-    /**
-     * Format print indexes result
-     * @param array pair of indexes found
-     */
-    public static void printArray(int[] array){
-        System.out.print("[");
-        for(int item : array){
-            System.out.print(item);
-            if(array[array.length-1] != item)
-            System.out.print(", ");
-        }
-        System.out.print("] => ");
-    }
-
-    /**
-     * Format print indexes result
-     * @param array pair of indexes found
-     * @param target result
-     */
-    public static void printArray(int[] array, int target){
-        App.printArray(array);
-        System.out.println(target);
-    }
-
     /**
      * Find 2 indexes in the array that the addition gives the target number
      * @param number_array Array of numbers
