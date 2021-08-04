@@ -8,7 +8,7 @@ class App:
     @classmethod
     def two_sum(
         cls: Type[T], number_list: list[int], target: int
-    ) -> Optional[list[int]]:
+    ) -> list[Optional[int]]:
         """Find 2 indexes in the list that the addition gives the target number
 
         Args:
@@ -17,19 +17,19 @@ class App:
             target (int): result expected
 
         Returns:
-            Optional[list[int]]: list of indexes of None
+            list[Optional[int]]: list of indexes or empty list
         """
         for current_index, number in enumerate(number_list):
             complement: int = target - number
             if complement > 0 and complement in number_list:
                 return [current_index, number_list.index(complement)]
-        return None
+        return []
 
 
 if __name__ == "__main__":
 
     number_list: list[int] = [2, 4, 8, 16, 32]
-    expected: Dict[int, Any] = {12: [1, 2], 34: [0, 4], 18: [0, 3], 42: None}
+    expected: Dict[int, Any] = {12: [1, 2], 34: [0, 4], 18: [0, 3], 42: []}
 
     for target, expect in expected.items():
         assert App.two_sum(number_list, target) == expect
