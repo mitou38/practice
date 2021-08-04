@@ -9,7 +9,7 @@ class App:
     def two_sum(
         cls: Type[T], number_list: list[int], target: int
     ) -> Optional[list[int]]:
-        """Find 2 indexes in the array that the addition gives the target number
+        """Find 2 indexes in the list that the addition gives the target number
 
         Args:
             cls (Type[T]): App class type
