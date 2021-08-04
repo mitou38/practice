@@ -32,7 +32,8 @@ public class App {
     /**
      * Find 2 indexes in the array that the addition gives the target number
      * @param number_array Array of numbers
-     * @param target result
+     * @param target result expected
+     * @return Array of indexes of null
      */
     public static int[]  twoSum(int[] number_array, int target ){
 
