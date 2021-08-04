@@ -29,9 +29,9 @@ class App:
 if __name__ == "__main__":
 
     number_list: list[int] = [2, 4, 8, 16, 32]
-    expected: Dict[int, Any] = {12: [1, 2], 34: [0, 4], 18: [0, 3], 42: []}
+    expected: Dict[int, list[Optional[int]]] = {12: [1, 2], 34: [0, 4], 18: [0, 3], 42: []}
 
-    for target, expect in expected.items():
-        assert App.two_sum(number_list, target) == expect
+    for target, expect_indexes in expected.items():
+        assert App.two_sum(number_list, target) == expect_indexes
 
     print("Everything its OK")
