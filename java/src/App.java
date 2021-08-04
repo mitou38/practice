@@ -1,6 +1,6 @@
 import java.util.List;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class App {
@@ -25,17 +25,19 @@ public class App {
             }
             
         }
-        return null;
+        return new int[]{};
     }
     public static void main(String[] args) throws Exception {
         int[] number_array = new int[] {2, 4, 8, 16, 32};
-        HashMap<Integer, Object> expected = new HashMap<Integer, Object>();
-        expected.put(12, new int[]{1, 2});
-        expected.put(34, new int[]{0, 4});
-        expected.put(18, new int[]{0, 3});
-        expected.put(42, null);
 
-        for (HashMap.Entry<Integer, Object> item : expected.entrySet()) {
+        Map<Integer, Object> expected = Map.of(
+            12, new int[]{1, 2},
+            34, new int[]{0, 4},
+            18, new int[]{0, 3},
+            42, new int[]{}
+        );
+
+        for (Map.Entry<Integer, Object> item : expected.entrySet()) {
             assert App.twoSum(number_array, item.getKey()) == item.getValue();
         }
 
