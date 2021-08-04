@@ -7,16 +7,16 @@ public class App {
 
     /**
      * Find 2 indexes in the array that the addition gives the target number
-     * @param number_array Array of numbers
+     * @param numberArray Array of numbers
      * @param target result expected
      * @return Array of indexes or empty Array
      */
-    public static int[]  twoSum(int[] number_array, int target ){
+    public static int[]  twoSum(int[] numberArray, int target ){
 
-        for(int i =0; i < number_array.length; i++)
+        for(int i =0; i < numberArray.length; i++)
         {
-            int complement = target - number_array[i];
-            List<Integer> listNumbers = Arrays.stream(number_array)
+            int complement = target - numberArray[i];
+            List<Integer> listNumbers = Arrays.stream(numberArray)
                 .boxed()
                 .collect(Collectors.toList());
             if(complement > 0 && listNumbers.contains(complement))
@@ -28,7 +28,7 @@ public class App {
         return new int[]{};
     }
     public static void main(String[] args) throws Exception {
-        int[] number_array = new int[] {2, 4, 8, 16, 32};
+        int[] numberArray = new int[] {2, 4, 8, 16, 32};
 
         Map<Integer, Object> expected = Map.of(
             12, new int[]{1, 2},
@@ -38,7 +38,7 @@ public class App {
         );
 
         for (Map.Entry<Integer, Object> item : expected.entrySet()) {
-            assert App.twoSum(number_array, item.getKey()) == item.getValue();
+            assert App.twoSum(numberArray, item.getKey()) == item.getValue();
         }
 
         System.out.println("Everything its OK");
