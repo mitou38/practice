@@ -26,7 +26,7 @@ export default class App {
 	console.assert(
 		JSON.stringify(App.twoSum([2, 4, 8, 16, 32], expect.target)) ===
 			JSON.stringify(expect.expect_indexes),
-		`Error Sum ${expect.target}`
+		new Error(`Sum for total of "${expect.target}"`)
 	)
 );
 console.log("Everything is OK");
