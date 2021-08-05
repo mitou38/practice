@@ -41,6 +41,6 @@ public class App {
             assert App.twoSum(numberArray, item.getKey()) == item.getValue();
         }
 
-        System.out.println("Everything its OK");
+        System.out.println("Everything is OK");
     }   
 }
