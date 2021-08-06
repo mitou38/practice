@@ -10,8 +10,10 @@ export default class App {
 		let result = [];
 		for (const number of numberArray) {
 			const complement = target - number;
-			if (complement > 0 && numberArray.includes(complement))
+			if (complement > 0 && numberArray.includes(complement)) {
 				result = [numberArray.indexOf(complement), numberArray.indexOf(number)];
+				break;
+			}
 		}
 		return result;
 	}
