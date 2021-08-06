@@ -1,6 +1,6 @@
 ### RUN COMMAND
 
-###### From `php/` folder
+###### From `php/src/` folder
 
 ```bash
 php app.php

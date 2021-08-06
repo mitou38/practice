@@ -1,0 +1,15 @@
+{
+    "name": "meschac/php",
+    "autoload": {
+        "psr-4": {
+            "Meschac\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eliam LOTONGA",
+            "email": "e.m.lotonga@gmail.com"
+        }
+    ],
+    "require": {}
+}

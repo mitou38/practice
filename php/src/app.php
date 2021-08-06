@@ -1,4 +1,7 @@
 <?php
+namespace Meschac\Php;
+
+
 class App{
   /**
    * Find 2 indexes in the array that the addition gives the target number
@@ -24,6 +27,6 @@ $expected = [
   42 => [],
 ];
 foreach($expected as $target => $expect_indexes){
-  assert(\App::twoSum($numbers, $target) == $expect_indexes);
+  assert(App::twoSum($numbers, $target) == $expect_indexes);
 }
 echo "Everything is OK" . PHP_EOL;
