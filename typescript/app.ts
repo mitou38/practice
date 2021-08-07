@@ -31,7 +31,9 @@ const expected_cases: Array<ExpectedCase> = [
         {target: 16, expect_indexes: [16]},
         {target: 32, expect_indexes: [32]},
 	{ target: 42, expect_indexes: [] },
-].forEach((expect: ExpectedCase) =>
+];
+
+expected_cases.forEach((expect: ExpectedCase) =>
 	console.assert(
 		JSON.stringify(App.twoSum([2, 4, 8, 16, 32], expect.target)) ===
 			JSON.stringify(expect.expect_indexes),
